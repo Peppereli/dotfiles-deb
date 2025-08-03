@@ -258,8 +258,8 @@ bindsym $mod+F6 exec "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+; pkill -R
 bindsym $mod+F5 exec "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; pkill -RTMIN+8 waybar"
 bindsym $mod+F7 exec "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; pkill -RTMIN+8 waybar"
 
-bindsym $mod+Shift+F2 exec --no-startup-id shutdown -r now
-bindsym $mod+Shift+F1 exec --no-startup-id shutdown -a now
+bindsym $mod+Shift+F2 exec --no-startup-id systemctl reboot
+bindsym $mod+Shift+F1 exec --no-startup-id systemctl poweroff
 
 # Brightness
 bindsym XF86MonBrightnessDown exec light -U 10

@@ -297,7 +297,7 @@ bindsym $mod+q kill
 bindsym $mod+space exec rofi -show drun
 # Open the application launcher (alternate version):
 bindsym $mod+d exec $menu
-bindsym $mod+Ctrl+s exec grim -g "$(slurp)" 
+bindsym $mod+Ctrl+s exec cd ~/Pictures && grim -g "$(slurp)" && thunar ~/Pictures/ 
 bindsym $mod+Ctrl+c exec grim -g "$(slurp)" - | wl-copy
 
 #======#

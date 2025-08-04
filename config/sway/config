@@ -48,7 +48,7 @@ input "1267:12586:ELAN0504:01_04F3:312A_Touchpad" {
 #========================#
 # Appearance and Theming #
 #========================#
-
+font pango:monospace 12
 set $gnome_schema org.gnome.desktop.interface
 exec_always --no-startup-id "gsettings set org.gnome.desktop.interface text-scaling-factor 1.2"
 exec_always {

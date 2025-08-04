@@ -48,7 +48,9 @@ input "1267:12586:ELAN0504:01_04F3:312A_Touchpad" {
 #========================#
 # Appearance and Theming #
 #========================#
+
 set $gnome_schema org.gnome.desktop.interface
+exec_always --no-startup-id "gsettings set org.gnome.desktop.interface text-scaling-factor 1.2"
 exec_always {
     gsettings set $gnome_schema gtk-theme "Breeze-Dark"
     gsettings set $gnome_schema icon-theme "breeze-dark"
@@ -56,10 +58,7 @@ exec_always {
     gsettings set $gnome_schema font-name "JetBrains Mono Nerd Font 10"
     gsettings set $gnome_schema color-scheme "prefer-dark" # For dark mode preference
 }
-exec_always --no-startup-id "gsettings set org.gnome.desktop.interface text-scaling-factor 1.2"
-exec_always --no-startup-id "xrdb -load ~/.Xresources"
-exec_always --no-startup-id "xrdb -merge ~/.Xresources"
-exec_always --no-startup-id xrdb ~/.Xresources
+
 # Declare Colors:
 set $background #245d7b
 set $color_urgent #fb4934
@@ -79,7 +78,7 @@ client.urgent           $color_urgent            $color_urgent       $color_urge
 gaps inner 4
 # Configure the default border:
 default_border pixel 2
-exec --no-startup-id "sway reload"
+
 #====================================#
 # Activate the panel                 #
 #====================================#
@@ -107,7 +106,7 @@ bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
 # Screen locking (automatic, with a timeout)
 set $lock swaylock -f -c 000000
 exec swayidle -w \
-    timeout 6000 'swaylock -f -c 000000' \
+    timeout 60000 'swaylock -f -c 000000' \
     timeout 1200 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -f -c 000000'

@@ -47,6 +47,6 @@ sudo() {
     command sudo "$@"
   fi
 }
-export PATH="$PATH:/opt/zig"
+source <(fzf --zsh)
 export TERMINAL="alacritty"
 export TERM="alacritty"

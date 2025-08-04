@@ -299,6 +299,7 @@ bindsym $mod+space exec rofi -show drun
 bindsym $mod+d exec $menu
 bindsym $mod+Ctrl+s exec cd ~/Pictures && grim -g "$(slurp)" && thunar ~/Pictures/
 bindsym $mod+Ctrl+f exec cd ~/Pictures && grim -g "$(slurp)"
+bindsym $mod+Ctrl+g exec cd ~/Pictures && grim
 bindsym $mod+Ctrl+c exec grim -g "$(slurp)" - | wl-copy
 
 #======#

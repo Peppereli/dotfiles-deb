@@ -18,12 +18,12 @@
 input type:keyboard {
     xkb_layout "us,ru,kz,ir"
     xkb_options "grp:alt_shift_toggle"
-    :# You can add other keyboard settings here if you like, e.g.:
+    # You can add other keyboard settings here if you like, e.g.:
     xkb_numlock enabled
     repeat_delay 300
     repeat_rate 30
 }
-input "type:pointer"{
+input "type:pointer" {
     accel_profile "flat"
     pointer_accel 0.5
 }

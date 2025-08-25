@@ -1,0 +1,16 @@
+
+@theme "~/.config/rofi/theme.rasi"
+configuration {
+    font: "Inter 14";
+    show-icons: true;
+    display-window: "Window";
+    display-drun: "Search";
+    modi: "window,run,drun";
+}
+element-icon {
+    size: 32px;
+}
+listview {
+    lines: 12;
+}
+

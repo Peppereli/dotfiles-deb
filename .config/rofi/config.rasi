@@ -1,4 +1,3 @@
-
 @theme "~/.config/rofi/theme.rasi"
 configuration {
     font: "Inter 14";
@@ -6,6 +5,7 @@ configuration {
     display-window: "Window";
     display-drun: "Search";
     modi: "window,run,drun";
+    terminal: "foot";
 }
 element-icon {
     size: 32px;
@@ -13,4 +13,3 @@ element-icon {
 listview {
     lines: 12;
 }
-

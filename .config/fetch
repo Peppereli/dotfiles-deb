@@ -11,7 +11,7 @@ echo -e "${CYAN}Uptime:${NC} $(uptime -p | sed 's/up //')"
 echo -e "${RED}Hostname:${NC} $(uname -n)"
 echo -e "${RED}User:${NC} $(whoami)"
 echo -e "${RED}Shell:${NC} $(echo $SHELL | awk -F'/' '{print $NF}')"
-echo -e "${RED}Packages:${NC} $(xbps-query -l | wc -l)"
+echo -e "${RED}Packages:${NC} $(apt list --installed | wc -l)"
 display_outputs=$(ls -d /sys/class/drm/card*-* 2>/dev/null)
 if [ -z "$display_outputs" ]; then
     echo "No display outputs found in /sys/class/drm/."

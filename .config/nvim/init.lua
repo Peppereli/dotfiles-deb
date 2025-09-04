@@ -3,11 +3,10 @@ local cmd = vim.cmd
 local api = vim.api
 local fn = vim.fn
 local g = vim.g
-
 -- Options
 opt.number = true
+opt.cursorline = true
 opt.relativenumber = true
-opt.cursorline = false
 opt.wrap = true
 opt.scrolloff = 10
 opt.sidescrolloff = 8
@@ -82,7 +81,6 @@ local map_opts = { silent = true, noremap = true }
 
 map('i', '(', '()<Left>', map_opts)
 map('i', '"', '""<Left>', map_opts)
-map('i', "'", "''<Left>", map_opts)
 map('i', '<', '<><Left>', map_opts)
 map('i', '{', '{}<Left>', map_opts)
 map('i', '[', '[]<Left>', map_opts)

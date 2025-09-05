@@ -212,7 +212,7 @@ bindsym $mod+F4 exec light -A 10
 bindsym $mod+F3 exec light -U 10
 # Autostart
 exec --no-startup-id nm-applet
-exec --no-startup-id lxpolkit
+exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec --no-startup-id dunst
 #=============================================#
 # Keyboard Shortcuts (launching applications) #
